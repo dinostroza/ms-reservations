@@ -1,7 +1,7 @@
 default: start logs
 
-service:=ms-template-microservice
-project:=ms-workspace-demo
+service:=ms-reservations
+project:=msupandrunning
 
 .PHONY: start
 start:

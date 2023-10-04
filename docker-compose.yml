@@ -1,8 +1,11 @@
 version: "3.4"
 
 services:
-  ms-template-microservice:
-    container_name: ms-template-microservice
+  ms-reservations:
+    container_name: ms-reservations
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.ms-reservations.rule=PathPrefix(`/reservations`)"
     build:
       context: .
     restart: always
